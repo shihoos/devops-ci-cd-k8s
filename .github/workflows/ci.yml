@@ -23,4 +23,4 @@ jobs:
         run: docker build -t shihoos/devops-flask-app:latest .
 
       - name: Push Docker image
-        run: docker push shihoos/devops-flask-app:lastest
+        run: docker push shihoos/devops-flask-app:latest

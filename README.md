@@ -39,3 +39,6 @@ To deploy the application using Minikube:
 1. Apply the Kubernetes manifests:
    ```bash
    kubectl apply -f k8s/
+   
+2. Access the service:
+    minikube service flask-service

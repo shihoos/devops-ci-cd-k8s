@@ -13,3 +13,29 @@ This project demonstrates a beginner-friendly DevOps workflow using a containeri
 ---
 ## 📁 Project Structure
 
+devops-ci-cd-k8s/
+├── app/ # Flask application code
+│ └── app.py
+├── Dockerfile # Instructions to build the Docker image
+├── k8s/ # Kubernetes deployment files
+│ ├── deployment.yaml
+│ └── service.yaml
+├── .github/workflows/ci.yml # GitHub Actions workflow file
+└── README.md # This file
+---
+
+## 📦 How It Works
+
+1. Code is pushed to GitHub.
+2. GitHub Actions builds a Docker image.
+3. The image is pushed to Docker Hub.
+4. Kubernetes (Minikube) pulls the image and deploys the app.
+---
+
+## 🚀 Running Locally
+
+To deploy the application using Minikube:
+
+1. Apply the Kubernetes manifests:
+   ```bash
+   kubectl apply -f k8s/

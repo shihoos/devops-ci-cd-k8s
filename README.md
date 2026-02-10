@@ -14,7 +14,6 @@ This project demonstrates a beginner-friendly DevOps workflow using a containeri
 ## 📁 Project Structure
 
 devops-ci-cd-k8s/
-devops-ci-cd-k8s/
 ├── app/
 │ └── app.py
 ├── Dockerfile
@@ -25,6 +24,7 @@ devops-ci-cd-k8s/
 │ └── workflows/
 │ └── ci.yml
 └── README.md
+
 ---
 
 ## 📦 How It Works

@@ -14,14 +14,17 @@ This project demonstrates a beginner-friendly DevOps workflow using a containeri
 ## 📁 Project Structure
 
 devops-ci-cd-k8s/
-├── app/ # Flask application code
+devops-ci-cd-k8s/
+├── app/
 │ └── app.py
-├── Dockerfile # Instructions to build the Docker image
-├── k8s/ # Kubernetes deployment files
+├── Dockerfile
+├── k8s/
 │ ├── deployment.yaml
 │ └── service.yaml
-├── .github/workflows/ci.yml # GitHub Actions workflow file
-└── README.md # This file
+├── .github/
+│ └── workflows/
+│ └── ci.yml
+└── README.md
 ---
 
 ## 📦 How It Works

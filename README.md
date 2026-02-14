@@ -12,7 +12,6 @@ This project demonstrates a beginner-friendly DevOps workflow using a containeri
 - **Python Flask**
 ---
 ## 📁 Project Structure
-## 📁 Project Structure
 
 ```text
 devops-ci-cd-k8s/

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
        - name: flask
-         image: devops-flask-app
-         imagePullPolicy: Never
+         image: shihoos/devops-flask-app:latest
+         imagePullPolicy: Always
          ports:
          - containerPort: 5000

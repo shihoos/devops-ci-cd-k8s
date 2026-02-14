@@ -7,8 +7,10 @@ This project demonstrates a beginner-friendly DevOps workflow using a containeri
 - **Linux**
 - **Docker**
 - **Docker Hub**
+- **Nginx(Reverse Proxy)**
 - **Kubernetes (Minikube)**
 - **GitHub Actions (CI/CD)**
+- **Terraform(Infrastructure as Code)**
 - **Python Flask**
 ---
 ## 📁 Project Structure
@@ -18,13 +20,18 @@ devops-ci-cd-k8s/
 ├── app/
 │   └── app.py
 ├── Dockerfile
+├── nginx/
+│   └── default.conf
 ├── k8s/
 │   ├── deployment.yaml
-│   └── service.yaml
-├── .github/
-│   └── workflows/
-│       └── ci.yml
+│   ├── service.yaml
+│   └── nginx-deployment.yaml
+├── terraform/
+│   └── main.tf
+├── .github/workflows/
+│   └── ci.yml
 └── README.md
+
 ```
 ---
 
@@ -34,16 +41,30 @@ devops-ci-cd-k8s/
 2. GitHub Actions builds a Docker image.
 3. The image is pushed to Docker Hub.
 4. Kubernetes (Minikube) pulls the image and deploys the app.
+5. Nginx routes traffic to Flask
+6. Terraform provisions Kubernetes resources 
+
 ---
 
-## 🚀 Running Locally
+## ⚙️ CI Pipeline
 
-To deploy the application using Minikube:
+- Triggered on push to `main`
+- Builds Docker image
+- Pushes image to Docker Hub
 
-1. Apply the Kubernetes manifests:
-   ```bash
-   kubectl apply -f k8s/
-   
-2. Access the service:
-   ```bash
-   minikube service flask-service
+---
+## 🚀 Deploy Using Terraform (Recommended)
+
+ ```bash
+ cd terraform
+ terraform init
+ terraform apply
+ ```
+Access application:
+ ```bash
+ minikube service flask-terraform-service
+ ```
+To clean resources:
+ ```bash
+ terraform destroy
+ ```

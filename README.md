@@ -68,3 +68,9 @@ To clean resources:
  ```bash
  terraform destroy
  ```
+🛠 Kubernetes YAML (Optional / Learning)
+
+Raw Kubernetes manifests are included for reference:
+ ```bash
+ kubectl applu -f k8s/
+ ```

@@ -60,6 +60,7 @@ devops-ci-cd-k8s/
  terraform init
  terraform apply
  ```
+---
 Access application:
  ```bash
  minikube service flask-terraform-service
@@ -72,5 +73,30 @@ To clean resources:
 
 Raw Kubernetes manifests are included for reference:
  ```bash
- kubectl applu -f k8s/
+ kubectl apply -f k8s/
+ ```
+---
+##📊 Monitoring
+
+##Prometheus and Grafana are used for basic Kubernetes monitoring.
+
+Install monitoring stack:
+ ```bash
+ helm install monitoring prometheus-community/kube-prometheus-stack
+ ```
+Access Grafana:
+ ```bash
+ kubectl port-forward svc/monitoring-grafana 3000:80
+ ```
+Open in browser:
+ ```bash
+ http://localhost:3000
+ ```
+Username:
+ ```bash
+admin
+ ```
+Retrieve Grafana password:
+ ```bash
+kubectl get secret monitoring-grafana -o jsonpath="{.data.admin-password}" | base64 --decode
  ```

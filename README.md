@@ -76,9 +76,9 @@ Raw Kubernetes manifests are included for reference:
  kubectl apply -f k8s/
  ```
 ---
-##📊 Monitoring
+## 📊 Monitoring
 
-##Prometheus and Grafana are used for basic Kubernetes monitoring.
+## Prometheus and Grafana are used for basic Kubernetes monitoring.
 
 Install monitoring stack:
  ```bash
